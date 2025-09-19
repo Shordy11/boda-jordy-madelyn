@@ -478,14 +478,15 @@
 
     <script>
         function selectAttendance(value) {
-            document.getElementById('attendance').value = value;
-            
-            // Update visual selection
-            const options = document.querySelectorAll('.attendance-option');
-            options.forEach(opt => opt.classList.remove('selected'));
-            
-            event.currentTarget.classList.add('selected');
-        }
+    // Cambia estas líneas:
+    document.getElementById('attendance').value = value;
+    
+    // Update visual selection
+    const options = document.querySelectorAll('.attendance-option');
+    options.forEach(opt => opt.classList.remove('selected'));
+    
+    event.currentTarget.classList.add('selected');
+}
         
         document.getElementById('attendance-form').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -539,3 +540,4 @@
 </body>
 
 </html>
+
