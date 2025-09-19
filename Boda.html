@@ -422,39 +422,45 @@
             <h2>CONFIRMACIÓN DE ASISTENCIA</h2>
             <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">Por favor, confirma tu asistencia antes del 20 de Noviembre de 2025</p>
             
-            <form id="attendance-form">
-                <div class="form-group">
-                    <label for="name">Nombre completo *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Correo electrónico *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label>¿Asistirás a nuestra boda? *</label>
-                    <div class="attendance-options">
-                        <div class="attendance-option" onclick="selectAttendance('yes')">
-                            <i class="fas fa-check-circle"></i>
-                            <div>Sí, asistiré</div>
-                        </div>
-                        <div class="attendance-option" onclick="selectAttendance('no')">
-                            <i class="fas fa-times-circle"></i>
-                            <div>No podré asistir</div>
-                        </div>
-                    </div>
-                    <input type="hidden" id="attendance" name="attendance" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Mensaje para los novios (opcional)</label>
-                    <textarea id="message" name="message" placeholder="Escribe aquí tu mensaje..."></textarea>
-                </div>
-                
-                <button type="submit">Enviar confirmación</button>
-            </form>
+            <form id="attendance-form" action="https://formsubmit.co/estrada.interc@gmail.com" method="POST">
+    <!-- Campos ocultos para configurar FormSubmit -->
+    <input type="hidden" name="_subject" value="Nueva confirmación de boda - Jordy & Madelyn">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://https://shordy11.github.io/boda-jordy-madelyn/confirmacion.html">
+    <input type="hidden" name="_captcha" value="false">
+    
+    <div class="form-group">
+        <label for="name">Nombre completo *</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Correo electrónico *</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    
+    <div class="form-group">
+        <label>¿Asistirás a nuestra boda? *</label>
+        <div class="attendance-options">
+            <div class="attendance-option" onclick="selectAttendance('Sí asistirá')">
+                <i class="fas fa-check-circle"></i>
+                <div>Sí, asistiré</div>
+            </div>
+            <div class="attendance-option" onclick="selectAttendance('No asistirá')">
+                <i class="fas fa-times-circle"></i>
+                <div>No podré asistir</div>
+            </div>
+        </div>
+        <input type="hidden" id="attendance" name="attendance" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="message">Mensaje para los novios (opcional)</label>
+        <textarea id="message" name="message" placeholder="Escribe aquí tu mensaje..."></textarea>
+    </div>
+    
+    <button type="submit">Enviar confirmación</button>
+</form>
         </section>
         
         <div class="confirmation-message" id="confirmation-message">
@@ -531,4 +537,5 @@
         setInterval(updateCountdown, 1000);
     </script>
 </body>
+
 </html>
